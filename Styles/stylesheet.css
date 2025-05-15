@@ -7,19 +7,76 @@ body {
     background-repeat: repeat;
     background-size: 15vh;
     color: white;
+    margin: 0; 
+    padding: 0;
 }
+
+.bg {
+    color: black;
+    background-color: white;
+    min-width: 200px;
+    padding: 1vh 20px;
+    border-radius: 10px;
+    border-style: double;
+    border-width: 10px;
+    border-color: violet;
+    box-sizing: border-box;
+}
+
+/* nav Bar */
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black; 
+    padding: 10px 15px; 
+    border-radius: 10px; 
+    border-style: double; 
+    border-width: 10px; 
+    border-color: violet;
+    background-color: white;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+
+
 
 /* Header */
 
 #start {
     display: block;
-    align-items: center;
+    align-items: center; 
     text-align: center;
     margin: 0 auto;
     padding: 20px;
     font-size: 1.3vh;
-    line-height: 1px;
-    background-color: rgba(255, 255, 255, 30%);
+    line-height: 1px; 
+    color: rgb(80, 80 ,80);
+    background-color: rgba(255, 255, 255, 0.3); 
+    border-radius: 10px;
 }
 
 .emoticons {
@@ -27,37 +84,97 @@ body {
     justify-content: center;
     align-items: center;
     margin: auto auto 40px auto;
-    padding: auto;
+    padding: auto; 
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
+
+/* Title */
 #title {
-    display: block;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 0 auto;
     padding: 20px;
     text-align: center;
-    font-size: 2vh;
 }
 
 #title img {
     width: 25vh;
     height: 25vh;
     border-radius: 30px;
-    background-color: white;
-    margin: 5vh 0vmin;
-
+    margin-bottom: 15px;
 }
 
 #title h1 {
+    display: block;
     font-size: 4vh;
-    color: black;
-    background-color: white;
-    margin: 5vh 0vmin;
-    min-width: 200px;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    border-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Page */
+.page-container {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px;
+    gap: 20px;
+}
+
+/* SideBar */
+.left-column {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+/* Main Bar */
+.right-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Music player */
+#music {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    grid-template-rows: auto;
+    align-items: center;
+    text-align: left; 
+    gap: 10px; 
+    padding: 15px;
+    font-size: 1.4vh;
+    width: 100%;
+}
+
+#album-cover {
+    width: 80px; 
+    height: 80px;
+    grid-row: 1 / span 2;
+    border-radius: 5px;
+}
+
+.music-text {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.music-text p {
+    margin: 5px 0;
+}
+
+
+/* Ensure .bg elements within columns take available width */
+.left-column .bg,
+.right-column .bg {
+    width: 100%;
+    align-self: stretch;
+}
+
+/* Optional styling for the placeholder content in Main Content */
+.right-column article {
+    padding: 20px;
 }
