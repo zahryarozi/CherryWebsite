@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+body {
+    font-family: 'Cal Sans', sans-serif;
+    font-style: normal;
+    background-image: url("../resources/images/pink-pattern.jpg");
+    background-repeat: repeat;
+    background-size: 15vh;
+    color: white;
+}
+
+/* Header */
+
+#start {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.3vh;
+    line-height: 1px;
+    background-color: rgba(255, 255, 255, 30%);
+}
+
+.emoticons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto 40px auto;
+    padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#title {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 2vh;
+}
+
+#title img {
+    width: 25vh;
+    height: 25vh;
+    border-radius: 30px;
+    background-color: white;
+    margin: 5vh 0vmin;
+
+}
+
+#title h1 {
+    font-size: 4vh;
+    color: black;
+    background-color: white;
+    margin: 5vh 0vmin;
+    min-width: 200px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-radius: 10px;
+}
