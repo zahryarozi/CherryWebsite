@@ -1,4 +1,4 @@
-# TwoSixtyOneNine's PortFolio
+# Zahrya's Website!
 ###### Welcome to my page! ദ്ദി(｡•̀ ,<)~✩‧₊
 
 This is my original, completely self-made website to introduce myself and show my works! (When I have them lol)
@@ -7,24 +7,38 @@ Website link: [TO-DO]
 
 ## To-do
 #### Main page
-- [ ] Full Navigation
-- [ ] General Introduction
-- [ ] Small About Me
-- [ ] Projects Placeholder
-- [ ] Contact Info
+- [ ] Full Working Navigation
+- [ ] General Introduction (Welcome)
+- [ ] Blog Placeholder
 - [ ] Footer
-  
+
+#### About Me
+- [ ] Full Working Navigation
+- [ ] General introduction (About)
+- [ ] Experience
+- [ ] Footer
+
 #### Projects
-- [ ] Full Navigation
+- [ ] Full Working Navigation
 - [ ] Introduction
 - [ ] Projects PlaceHolder
 - [ ] Footer
 
-#### About Me
-- [ ] Full Navigation
-- [ ] Small introduction
-- [ ] Programs Used
-- [ ] Experience
+#### MyOCs
+- [ ] Full Working Navigation
+- [ ] Small Notice
+- [ ] Welcome & Introduction
+- [ ] OCs
+- [ ] Footer
+
+#### Socials
+- [ ] Full Working Navigation
+- [ ] Basic Socials
+- [ ] Footer
+
+#### Contact
+- [ ] Full Working Navigation
+- [ ] Basic Contact
 - [ ] Footer
 
 #### ReadMe
