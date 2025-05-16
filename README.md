@@ -8,7 +8,7 @@ Website link: [TO-DO]
 ## To-do
 #### Main page
 - [ ] Full Working Navigation
-- [ ] General Introduction (Welcome)
+- [X] General Introduction (Welcome)
 - [ ] Blog Placeholder
 - [ ] Footer
 

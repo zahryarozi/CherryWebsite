@@ -8,9 +8,8 @@
 <body>
     <header>
         <div id="start">
+            <p>"Music is liquid architecture; Architecture is frozen music" - Johann Wolfgang</p>
             <p class="emoticons">〜⁠(⁠꒪⁠꒳⁠꒪⁠)⁠〜</p>
-            <p>"I'm feelin lost, but on track to a new mind.</p>
-            <p>And my back's to the past, don't be scared for me."</p>
         </div>
         <nav>
             <ul>
@@ -24,31 +23,53 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
-        <div id="title"> <img src="./resources/images/placeholder.jpg" alt="Placeholder Image">
-            <h1 class="bg"> Welcome! My name is <em>Zahrya Rozi</em></h1>
+        <div id="title" class="bg"> 
+            <div id="title-content">
+                <img src="./resources/images/zahryarozi.png" alt="Zahrya's PFP">
+                <div id="title-text">
+                    <h1> Welcome! My name is <em>Zahrya Rozi</em></h1>
+                    <h6>"I'm feelin lost, but on track to a new mind. And my back's to the past, don't be scared for me."</h6>
+                    <p>
+                        Another 19yo Wired from the internet!! I'm kinda shy and introverted but friendly (or at least I try to be), plus I'm not used to talking too much.
+                        <br><br>
+                        My favorite color is pink and my passion is photography.
+                        <br><br>                     
+                        I don't reeaaally have a Social life, I'm usually on my room listening to music and navigating the web, exploring all I can. My personality likes to do little hops between episodes of "hyperactive optimism" and "nihilist negativity" as I like to call them.
+                    </p>
+                </div>
+            </div>
         </div>
     </header>
 
     <div class="page-container">
         <aside class="left-column">
             <div id="music" class="bg">
-                <img id="album-cover" src="https://images.genius.com/3973b7953d48dce1f96317af09bb2b30.1000x1000x1.jpg" alt="Album Cover">
-                <div class="music-text">
-                    <p> 藤井風 (Fujii Kaze) - まつり (Matsuri) </p>
-                    <p>01:04 ━━━━●───── 03:45</p>
-                    <p> ⇆ㅤ ㅤ◁ㅤ ❚❚ ㅤ▷ ㅤㅤ↻ </p>
-                    <p> ılıılıılıılıılıılı </p>
-                    <p> ᴠᴏʟᴜᴍᴇ : ▮▮▮▮▮▮ </p>
+                <img id="album-cover" src="https://cdn-images.dzcdn.net/images/cover/3a0439904cc15f3f5b847b3aae6486cc/0x1900-000000-80-0-0.jpg" alt="Album Cover">
+                <p>まつり - Matsuri <br> Fujii Kaze </p>
+                <div class="custom-audio-controls">
+                    <div class="progress-bar-container">
+                        <input type="range" id="progress-slider" min="0" value="0">
+                    </div>
+                    <div class="time-display"> 
+                        <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                    </div>
+                    <button id="play-pause-button">Play</button>
+                    <p>Track Volume:</p>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
                 </div>
+                <audio id="audio-player" src="./resources/audio/Matsuri.mp3"></audio>
             </div>
         </aside>
         <main class="right-column">
             <article class="bg">
+
+            </article>
+            <article class="bg">
                 <h2>Woah, It sure is empty around here!    ¯\_(O~o)_/¯</h2>
                 <p>Buut soon enough I will begin to add stuff!!</p>
             </article>
-            </main>
+        </main>
     </div>
-
+    <script src="./resources/scripts/musicPlayer.js"></script>
 </body>
 </html>
