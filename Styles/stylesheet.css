@@ -123,6 +123,7 @@ nav a:hover {
     height: auto; 
     max-width: 300px; 
     max-height: 300px; 
+    border: 8px double #D3D3D3;
     border-radius: 10px;
     margin-bottom: 0;
     margin-left: 30px;
@@ -139,9 +140,8 @@ nav a:hover {
     width: 100%;
     box-sizing: border-box;
 }
-
 #title h1 {
-    font-size: 4vh;
+    font-size: 42px;
     margin-top: 0;
     margin-bottom: 5px;
     text-align: center;
@@ -158,6 +158,8 @@ nav a:hover {
 #title p {
     margin: 0;
     text-align: center;
+    margin-bottom: 1em;
+    line-height: 27px;
 }
 
 /* Page */
@@ -178,6 +180,11 @@ nav a:hover {
     gap: 20px;
     width: 100%; 
     box-sizing: border-box;
+}
+
+.left-column p.divider {
+    border: 1px solid;
+    margin: 30px auto;
 }
 
 /* Main Bar */
@@ -330,15 +337,16 @@ nav a:hover {
     font-size: 0.9em;
 }
 
-.time-display { /* New container for the time display */
-    display: flex; /* Arrange items in a row */
-    gap: 5px; /* Space around the slash */
+.time-display {
+    display: flex; 
+    gap: 5px; 
     color: #D3D3D3;
     font-size: 0.9em;
 }
 
-.time-display span { /* Target the individual time spans */
-    /* No specific layout needed here anymore */
+/* Liked */
+#liked h1 {
+    font-size: 20px;
 }
 
 
@@ -347,4 +355,93 @@ nav a:hover {
     text-align: center;
     color: rgb(170, 170, 170);
     line-height: 25px;
+}
+
+/* Sidebar Images*/
+.side-img img {
+    width: 102%;
+    border-radius: 3px;
+    margin: 10px auto;
+}
+
+.side-img p {
+    color: rgb(145, 145, 145);
+    text-align: center;
+    margin: 0;
+    font-size: 11px;
+}
+
+.side-img a {
+    color: rgb(145, 145, 145);
+}
+
+.side-img a:hover {
+    color: #a76c79;
+    text-decoration: none;
+
+}
+
+/* Blog */
+
+.blog-content h2 {
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.blog-content small {
+    color: #a76c79;
+    margin-top: 0;
+}
+
+.blog-content p {
+    margin-top: 30px;
+    line-height: 27px;
+}
+
+.blog-content p em {
+    font-style: normal;
+    color: #b1969c;
+}
+
+.blog-content p em.pos {
+    color: #85c78a;
+}
+
+.blog-content p em.neg {
+    color: #c78585;
+}
+
+.blog-content p em.time {
+    color: #c0c785;
+}
+
+.blog-content p em.socials {
+    color: #8586c7;
+}
+
+.blog-content p em.rlcontent {
+    color:#c7a385
+}
+
+.blog-content p em.wpcontent {
+    color: #C78593;
+}
+
+.blog-content .emoticons {
+    color: #858585;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-content img {
+    max-width: 90%;x
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.blog-content .blog-end {
+    text-decoration: wavy;
+    color: #a76c7994;
+    margin-top: 60px;
+    font-size: 12px;
 }
