@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+body {
+    font-family: 'Cal Sans', sans-serif;
+    font-style: normal;
+    background-color: #1A1A1A;
+    background-repeat: repeat;
+    background-size: 15vh;
+    color: #D3D3D3;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    max-width: 1200px; 
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.bg {
+    color: #D3D3D3;
+    background-color: inherit; 
+    min-width: 200px;
+    padding: 1vh 20px;
+    border-radius: 10px;
+    border-style: double;
+    border-width: 10px;
+    border-color: #C78593;
+    box-sizing: border-box;
+}
+
+#start {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin: auto auto 40px;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 0px;
+    color: rgb(80, 80 ,80);
+    background-color: inherit;
+    border-radius: 10px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+#start .emoticons {
+    color: rgb(80, 80 ,80);
+}
+
+.emoticons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto auto auto;
+    padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+    color: #858585;
+}
+
+/* Title */
+
+#title {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    padding: 20px;
+    text-align: center; 
+    margin: 20px auto;  
+    box-sizing: border-box;
+}
+
+
+
+/* nav Bar */
+
+nav {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #D3D3D3;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-style: double;
+    border-width: 10px;
+    border-color: #C78593;
+    background-color: #222222;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #535353;
+}
+
+
+/* Page */
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+
+/* Quotes/Poems */
+.qp {
+    text-align: center;
+    color: rgb(170, 170, 170);
+    line-height: 25px;
+}
+
+
+
+/* Emphasis Colors */
+
+p em {
+    font-style: normal;
+    color: #b1969c;
+}
+
+p em.pos {
+    color: #85c78a;
+}
+
+p em.neg {
+    color: #c78585;
+}
+
+p em.time {
+    color: #c0c785;
+}
+
+p em.socials {
+    color: #8586c7;
+}
+z
+p em.rlcontent {
+    color:#c7a385
+}
+
+p em.wpcontent {
+    color: #C78593;
+}
+
+/* Eyyy */
+.col {
+    background: linear-gradient(to right, #e6d96b, #8c6be6, #e66b6b);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}

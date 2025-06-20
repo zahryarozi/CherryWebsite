@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./Styles/stylesheet.css" rel="stylesheet"> <title>Zahrya's Website</title>
+    <link href="./resources/css/base.css" rel="stylesheet">
+    <link href="./resources/css/index.css" rel="stylesheet">
+    <title>Zahrya's Website</title>
 </head>
 <body>
     <header>
@@ -44,6 +46,11 @@
 
     <div class="page-container">
         <aside class="left-column">
+            <div id="statuscafe" class="bg">
+                <div id="statuscafe-username"></div>
+                <div id="statuscafe-content"></div>
+            </div>
+            <script src="./resources/js/current-status.js" defer></script>
             <div id="music" class="bg">
                 <img id="album-cover" src="https://cdn-images.dzcdn.net/images/cover/3a0439904cc15f3f5b847b3aae6486cc/0x1900-000000-80-0-0.jpg" alt="Album Cover">
                 <p>まつり - Matsuri <br> Fujii Kaze </p>
@@ -91,7 +98,7 @@
                 <img src="./resources/images/Sidebar/funnimeme1.png">
             </div>
 
-            <div class="poem bg">
+            <div class="qp bg">
                 <p>
                     "Beautiful music is the art of the prophets that can calm the agitations of the soul;<br> it is one of the most magnificent and delightful presents God has given us."
                 </p>
@@ -122,6 +129,7 @@
                 <img src="resources/gifs/MainPage/Blinkies/supportgay.gif">
                 <img src="resources/gifs/MainPage/Blinkies/RAWR.gif">
             </article>
+
 
             <article class="blog-content bg">
                 <h2> ✧ Second Mayor Website Update! ✧ </h2>
@@ -203,6 +211,6 @@
             </article>
         </main>
     </div>
-    <script src="./resources/scripts/musicPlayer.js"></script>
+    <script src="./resources/js/musicPlayer.js"></script>
 </body>
 </html>

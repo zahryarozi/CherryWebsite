@@ -1,0 +1,85 @@
+
+.bg {
+    margin: 20px auto;
+}
+
+/* Header */
+#title {
+    width: 80%
+}
+
+#title-content img {
+    width: 600px;
+    margin: 0;
+    border: 8px double #C78593;
+    border-radius: 15px;
+}
+
+/* About Me */ 
+#aboutme .intro {
+    text-align: center;
+    font-size: 17px;
+}
+
+#aboutme a {
+    color: #C78593;
+}
+
+
+/* Likes/Dislikes */
+
+#likesdislikes {
+    text-align: center;
+}
+
+#likesdislikes h2 {
+    letter-spacing: 7px;
+}
+
+/* Likes */
+
+#likesdislikes ul {
+    list-style: none;
+    padding: 0;
+    margin: 7px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#likesdislikes .small-likes {
+    flex: 0.46;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; 
+    box-sizing: border-box;
+    margin-left: 70px;
+}
+
+#likesdislikes .small-likes p.divider {
+    border: 1px solid;
+    margin: 30px auto;
+}
+
+/* Dislikes */
+#likesdislikes .small-dislikes {
+    flex: 0.46;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; 
+    box-sizing: border-box;
+    margin-right: 70px;
+}
+
+#likesdislikes .small-likes .bg, .small-dislikes .bg {
+    width: 100%;
+    align-self: stretch;
+}
+
+/* Coding */
+
+#coding {
+    text-align: center;
+    width: 90%    
+}
