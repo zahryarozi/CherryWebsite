@@ -7,39 +7,39 @@ Website link: https://zahryarozi-2619.github.io/zahryasportfolio/
 
 ## To-do
 #### Main page
-- [ ] Full Working Navigation
+- [X] Full Working Navigation
 - [X] General Introduction (Welcome)
-- [ ] Blog Placeholder
+- [X] Blog Placeholder
 - [ ] Footer
 
 #### About Me
-- [ ] Full Working Navigation
-- [ ] General introduction (About)
+- [X] Full Working Navigation
+- [X] General introduction (About)
 - [ ] Experience
 - [ ] Footer
 
 #### Projects
-- [ ] Full Working Navigation
+- [X] Full Working Navigation
 - [ ] Introduction
 - [ ] Projects PlaceHolder
 - [ ] Footer
 
 #### MyOCs
-- [ ] Full Working Navigation
+- [X] Full Working Navigation
 - [ ] Small Notice
 - [ ] Welcome & Introduction
 - [ ] OCs
 - [ ] Footer
 
 #### Socials
-- [ ] Full Working Navigation
-- [ ] Basic Socials
-- [ ] Footer
+- [X] Full Working Navigation
+- [X] Basic Socials
+- [X] Footer
 
 #### Contact
-- [ ] Full Working Navigation
-- [ ] Basic Contact
-- [ ] Footer
+- [X] Full Working Navigation
+- [X] Basic Contact
+- [X] Footer
 
 #### ReadMe
 - [ ] Beauti-fy finished project

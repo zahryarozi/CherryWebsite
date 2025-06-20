@@ -1,0 +1,18 @@
+#projects-placeholder {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 50px auto; 
+    width: 80%; 
+    max-width: 800px;
+}
+
+#projects-placeholder h1 {
+    font-size: 2.5em; 
+    color: #C78593; 
+    margin-bottom: 20px;
+}
+
+#projects-placeholder h2 {
+    font-size: 1.5em; 
+    color: #D3D3D3; 
+}
