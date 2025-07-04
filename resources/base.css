@@ -273,3 +273,26 @@ em.rlcontent {
 em.wpcontent {
     color: #ee93a6;
 }
+
+footer {
+    margin-top: 3rem;
+}
+
+footer h3 {
+    margin-top: 0;
+    text-align: center;
+    color: #b1969c;
+}
+
+.footer-line {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 0.5rem; 
+}
+
+.footer-line p {
+    margin: -7px 0;
+    padding: 0;
+    color: #616161;
+}
