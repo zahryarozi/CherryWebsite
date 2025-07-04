@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./resources/images/favicon.ico">
-    <link href="./resources/css/base.css" rel="stylesheet">
-    <link href="./resources/css/index.css" rel="stylesheet">
     <title>Zahrya's Website</title>
+    <link rel="icon" type="image/x-icon" href="./resources/images/favicon.ico">
+    <link href="./resources/base.css" rel="stylesheet">
+    <link href="./resources/index.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div id="start">
-            <p>"Music is liquid architecture; Architecture is frozen music" - Johann Wolfgang</p>
+    <div class="container">
+        <header>
+            <p class="italic-text">"Music is liquid architecture; Architecture is frozen music" - Johann Wolfgang</p>
             <p class="emoticons">〜⁠(⁠꒪⁠꒳⁠꒪⁠)⁠〜</p>
-        </div>
+        </header>
+
         <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./aboutme.html">About me</a></li>
-                <li><a></a></li> <!-- Too lazy to make a proper separator lmao-->
-                <li><a href="./coding.html">Projects</a></li>
-                <li><a href="./stories.html">MyOCs</a></li>
-                <li><a></a></li> 
-                <li><a href="./socials.html">Socials</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
+            <div class="nav-wrapper">
+                <div class="material-you-nav">
+                    <a class="active" href="./index.html">Home</a>
+                    <a href="./Coding/coding.html">Projects</a>
+                    <a href="./loader.html">MyOCs</a>
+                    <a href="./Socials/socials.html">Socials</a>
+                    <a href="./About me/aboutme.html">About me</a>
+                </div>
+            </div>
         </nav>
-        <div id="title" class="bg"> 
-            <div id="title-content">
-                <img src="./resources/images/zahryarozi.png" alt="Zahrya's PFP">
-                <div id="title-text">
-                    <h1> Welcome! My name is <em>Zahrya Rozi</em></h1>
-                    <h6>"I'm feelin lost, but on track to a new mind. And my back's to the past, don't be scared for me."</h6>
+
+        <main>
+            <div class="material-you-card hero-section">
+                <img class="profile-image" src="./resources/images/zahryarozi.png" alt="Zahrya's PFP">
+                <div class="profile-text">
+                    <h1> Welcome! My name is <em class="text-pink-accent">Zahrya Rozi</em></h1>
+                    <p class="italic-text text-gray-light">"I'm feelin lost, but on track to a new mind. And my back's to the past, don't be scared for me."</p>
                     <p>
                         Another 19yo Wired from the internet!! I'm kinda shy and introverted but friendly (or at least I try to be), plus I'm not used to talking too much.
                     </p>
@@ -40,169 +41,263 @@
                     </p>
                 </div>
             </div>
-        </div>
-    </header>
 
-
-
-    <div class="page-container">
-        <aside class="left-column">
-            <div id="statuscafe" class="bg">
-                <div id="statuscafe-username"></div>
-                <div id="statuscafe-content"></div>
-            </div>
-            <script src="./resources/js/current-status.js" defer></script>
-            <div id="music" class="bg">
-                <img id="album-cover" src="https://cdn-images.dzcdn.net/images/cover/3a0439904cc15f3f5b847b3aae6486cc/0x1900-000000-80-0-0.jpg" alt="Album Cover">
-                <p>まつり - Matsuri <br> Fujii Kaze </p>
-                <div class="custom-audio-controls">
-                    <div class="progress-bar-container">
-                        <input type="range" id="progress-slider" min="0" value="0">
+            <div class="content-grid">
+                <aside class="sidebar">
+                    <div id="statuscafe" class="material-you-card statuscafe-card">
+                        <div id="statuscafe-username"></div>
+                        <div id="statuscafe-content"></div>
                     </div>
-                    <div class="time-display"> 
-                        <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+                    <script src="./resources/js/current-status.js" defer></script>
+
+                    <div id="music" class="music-player">
+                        <div class="flex">
+                            <img id="album-cover" class="album-cover" src="https://cdn-images.dzcdn.net/images/cover/3a0439904cc15f3f5b847b3aae6486cc/0x1900-000000-80-0-0.jpg" alt="Album Cover">
+                            <div>
+                                <h3 class="text-pink-accent"><a href="https://www.youtube.com/watch?v=HMqhXxH5-RQ" target="_blank">まつり - Matsuri</a></h3>
+                                <p class="text-gray-light">Fujii Kaze</p>
+                            </div>
+                        </div>
+                        <div class="custom-audio-controls">
+                            <div class="progress-bar-container">
+                                <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+                            </div>
+                            <div class="time-display"> 
+                                <span id="current-time">0:00</span>  <span id="duration">0:00</span>
+                            </div>
+                            <div class="controls">
+                                <i class="material-icons text-3xl">skip_previous</i>
+                                <div class="play-button" id="play-pause-button-container">
+                                    <i id="play-pause-icon" class="material-icons text-4xl">play_arrow</i>
+                                </div>
+                                <i class="material-icons text-3xl">skip_next</i>
+                            </div>
+                            <p class="text-gray-light mt-4">Track Volume:</p>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                        <audio id="audio-player" src="./resources/audio/Matsuri.mp3"></audio>
                     </div>
-                    <button id="play-pause-button">Play</button>
-                    <p>Track Volume:</p>
-                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
-                </div>
-                <audio id="audio-player" src="./resources/audio/Matsuri.mp3"></audio>
+
+                    <div id="liked" class="material-you-card liked-music-section">
+                        <h1 class="text-pink-accent">Liked Music Genres:</h1>
+                        <ul>
+                            <li>Punk</li>
+                            <li>Alternative</li>
+                            <li>Breakcore</li>
+                            <li>Electronic</li>
+                            <li>Electroswing</li>
+                            <li>FutureFunk</li>
+                            <li>Hyperpop</li>
+                            <li>Scenecore</li>
+                            <li>UTAU</li>
+                            <li>Vocaloid </li>
+                        </ul>
+                        <h1 class="text-pink-accent">Liked Music Artists:</h1>
+                        <ul>
+                            <li>South Arcade</li>
+                            <li>bbno$</li>
+                            <li>m1v</li>
+                            <li>Set It Off</li>
+                            <li>whatsaheart</li>
+                            <li>Vylet Pony</li>
+                            <li>MagdalenaBay</li>
+                            <li>Osanzi</li>
+                            <li>Sirup</li>
+                            <li>STYXVII</li>
+                        </ul>
+                    </div>
+
+                    <div class="material-you-card side-img">
+                        <img src="./resources/images/Sidebar/funnimeme1.png" alt="Funny Meme">
+                    </div>
+
+                    <div class="material-you-card qp">
+                        <p>
+                            "Beautiful music is the art of the prophets that can calm the agitations of the soul;<br> it is one of the most magnificent and delightful presents God has given us."
+                        </p>
+                        <p>-Martin Luther</p>
+
+                        <p class="divider"></p>
+
+                        <p>
+                            "Music is a thing that changes people's lives. It has the capacity to make young people's lives better."
+                        </p>
+                        <p>-Noel Gallagher</p>
+                    </div>
+
+                    <div class="material-you-card side-img">
+                        <img src="./resources/images/Sidebar/TetoMiku.jpg" alt="Teto and Miku">
+                        <p>Credits to <a href="https://x.com/takawoyu?lang=en" target="_blank">@takawoyu</a></p>
+                    </div>
+
+                    <div class="material-you-card qp">
+                        <p>
+                            "Self respect. If you don’t have it, the world will walk all over you."
+                        </p>
+
+                        <p>-Sarah Dessen</p>
+                        <p class="divider"></p>
+
+                        <p>
+                            "The worst enemy to creativity is self-doubt."
+                        </p>
+                        <p>-Sylvia Plath</p>
+                    </div>
+
+                    <div class="material-you-card side-img">
+                        <img src="./resources/images/Sidebar/kittycathealer.jpg" alt="You are sad, take this cat!">
+                    </div>
+
+                    <div class="material-you-card qp">
+                        <p>
+                            You are the petals of the life you<br>
+                            That slowly growing on me<br>
+                            We could be the king and the queen if you want to<br>
+                            We could find a getaway if you need to<br>
+                            I do it all for you<br>
+                            I do it all of you<br>
+                            The Sun and the Moon won't know what we'd be up to<br>
+                            The God is wrong if he won't let me love you<br>
+                            With all I have<br>
+                            With all my faith   
+                        </p>
+                        <p>Lyrics from: <br><a href="https://www.youtube.com/watch?v=S5dKDYX0NSE" target="_blank">Lotus - Galdive, Wiana</a></p>
+                    </div>
+
+                    <div class="material-you-card side-img">
+                        <img src="./resources/images/Sidebar/tetotetobaguette.jpg" alt="Cool teto with Cool Baguette!">
+                        <p>Credits to <a href="https://www.pixiv.net/en/artworks/132288828" target="_blank">Konfleis</a> in Pixiv</p>
+                    </div>
+
+                </aside>
+
+                <section class="main-content">
+                    <article class="material-you-card badges-section">
+                        <a href="#" class="badge" style="background-color: #ff7ca3;"> ｡°⚠︎°｡ She / Her ｡°⚠︎°｡</a>
+                        <a href="#" class="badge" style="background-color: #ffd549;"> (¬_¬) AI "Art" is not art (¬_¬)</a>
+                        <a href="#" class="badge" style="background-color: #707eff;">⸜(｡>⩊< )⸝ I &hearts; IceCream!!! ⸜(｡>⩊< )⸝ </a>
+                        <a href="#" class="badge" style="background-color: #ffa857;">ᗢ I &hearts; Cats ᗢ</a>
+                        <a href="#" class="badge" style="background-color: #ff5adb;">(>⩊<) Pink, Pink... Pink everywhere!! (>⩊<)</a>
+                        <a href="#" class="badge" style="background-color: #b04fff;">✮⋆˙ ☠︎︎ Scene 4 ever ★☠︎ ✮⋆˙</a>
+                        <a href="#" class="badge" style="background-color: #ffffff;"> 🌈 I support Gay Rights🌈</a>
+                        <a href="#" class="badge" style="background-color: #417dff;"> 🎤🥬 Hatsune Miku Fan 🎤🥬</a>
+                        <a href="#" class="badge" style="background-color: #ff0026;"> ᯓ★ South Arcade fan ★ᯓ</a>
+                        <a href="#" class="badge" style="background-color: #56ff80;"> 🐧💻 ArchLinux User 💻🐧</a>
+                    </article>  
+
+                    <article class="material-you-card blog-content">    
+                        <h2> Third Mayor Website Update! </h2> <small>July 2, 2025</small>
+                        <p>
+                            Welcome Back<em class="socials">Wired</em>! This is this <em class="wpcontent">website's Third Mayor Update</em>! 
+                        </p>
+                        <p class="emoticons">◝(˶˃ ᵕ ˂˶) ◜♡</p>
+                        <p>
+                            Now okay... I know it took <em class="time">a little bit of time</em>. But it's done! I feel <em class="pos">comfortable</em> with this new version, as I added more <em class="wpcontent">personal stuff</em> (Like the OCs section finally). <em class="time">At the time</em> of writing there are still <em class="neg">some things I have to figure out first</em>, so this update will probably get out <em class="time">a day or so later</em>.
+                        </p>
+                        <p>
+                            I've been <em class="pos">learning more and more</em> about programming in order to make this page <em class="wpcontent">show off more of what I can do!</em> And the fact that for this update I <em class="wpcontent">redesigned it from the first version</em> made it a bit hard to finish. Actually, let me show you the <em>old design</em> from a screenshot of how it started!
+                        </p>
+                        <img src="./resources/images/Blog Entries/2025/may16-WebsiteArchive.png" style="width: 500px; border-radius: 20px;">
+                        <p>
+                            <em>Oh boy! It sure does look different!</em>
+                        </p>
+                        <p class="emoticons">( •͈૦•͈ )</p>
+                        <p> 
+                            <em class="time">At the beginning</em> I wanted it to look more <em class="wpcontent">old-styled.</em> So I used simple shapes to design the page! <em class="time">But then</em> I thought about it more and I decided I wanted the page to look more like <em class="wpcontent">'me'</em> and, since I really love the <em class="rlcontent">Material You Design by Google</em>, I chose the page to be styled after <em class="rlcontent">MYD</em>. 
+                        </p>
+                        <p>
+                            <em class="time">Now</em>, this update also <em class="pos">added new stuff</em>! Like my cherished <em class="wpcontent">BookShelf</em>!! It is something I wanted to do for <em class="time">a long time</em> because, <em class="time">ever since I was a kid</em>, I've always made up a lot of stories in my mind, most of which <em class="neg">got lost to time and I'm trying to remember</em>. <em class="wpcontent">The BookShelf</em> was made so that I don't keep losing track of my stories and I have somewhere to archive (or even showcase)     all of them.
+                        </p>
+                        <p>
+                            For this, I decided it would keep the <em>old design</em> in <em class="wpcontent">The BookShelf</em>. I want it to feel as If you're looking to the past through a portal.
+                        </p>
+                        <p class="emoticons">(╭ರ_•́)</p>
+                        <p>
+                            <em class="time">Right now</em>, It's still pretty <em>empty</em>, I <em class="time">need some time</em> to gather all my thoughts and add each character because despite the fact I made a lot of stories, <em class="neg">almost all of them do not have good coherence or relation to each other</em>, which makes it extremely hard to figure out how to connect each. And to be honest, that's not the only thing! 
+                        </p>
+                        <p>
+                            <em class="wpcontent">The sidebars...</em> Those sidebars have me all <em class="neg">stressed out</em> just to figure out what to put in each!! It may sound funny but, holy moly!! But anyway, it's all for myself and others to enjoy so. <em class="pos">I will not give up!!</em>
+                        </p>
+                        <p class="emoticons">(≖⩊≖)</p>
+                        <p>
+                            I'm going to release this update feeling a bit more <em class="pos">excited and smart</em>. I really <em class="pos">like</em> how the page is turning out!!
+                        </p>
+                        <p><em class="pos">Thanks for reading!</em> And remember to study hard and be positive! </p>
+                        <p class="emoticons">ヾ( ˃ᴗ˂ )◞ • *✰</p>
+                        <p class="blog-end">
+                            Written with love by: Zahrya Rozi
+                        </p>
+                    </article>
+
+                    <article class="material-you-card blog-content">
+                        <h2> Second Mayor Website Update! </h2> <small>May 17, 2025</small>
+                        <p>
+                            Hello <em class="socials">Wired</em>! This is this <em class="wpcontent">website's Second Mayor Update</em>! 
+                        </p>
+                        <p class="emoticons">٩(^ᗜ^ )و ´-</p>
+                        <p>
+                            I'll probably stop celebrating <em class="time">as soon as</em> I find the website is good enough to be fully <em class="socials">shared</em> hehe... Anyway, <em class="socials">y'all</em> have NO IDEA how proud I still am about the <em class="wpcontent">Matsuri's Music Player</em> on the <em class="wpcontent">side bar</em>. It's just, the best thing I've done in here so far.
+                        </p>
+                        <p>
+                            Today it's been fine, <em class="rlcontent">me and my sibling</em> decided it's was <em class="time">time to clean and fix up</em> our <em class="rlcontent">home</em>, so that's what we did. I actually really like how <em class="rlcontent">everything turned out</em>. Have y'all ever felt the air after cleaning? Like it smells really nice, and I'm not referring to the chemicals used to clean, but the smell of air itself. It's just cleaner, fresher, [other adjectives]...
+                        </p>
+                        <p>
+                            All of that cleaning left me really <em class="neg">exhausted</em> tho, my feet DO NOT want to move anymore. On the <em class="pos">bright side</em>, we finished so I can stay on my pc <em class="time">all the time</em> I want! And I'm using it to continue developing this <em class="wpcontent">website</em> more and more! <em class="time">This time</em> I tried adding more things that make it <em class="wpcontent">personal to me</em>.
+                        </p>
+                        <p class="emoticons">(ㅅ´ ˘ `)</p>
+                        <p>
+                            Apart from the obvious addition of the <em class="wpcontent">Music Likes to the sidebar</em>, I also added other stuff like <em class="wpcontent">The One Meme</em> (That's the name I came up with, it's staying.) and some <em class="wpcontent"> quotes</em>.
+                        </p>
+                        <p>
+                            I actually just started getting into quotes and poems <em class="time">a month ago</em>, I don't know why tho, I <em class="time">used to</em> hate reading anything longer than 4 paragraphs! And the reason why is really silly: My <em>sibling</em> <em class="neg">forced me</em> to read 10 books <em class="time">during my vacations</em> and that really stick with me. <em class="time">Every time</em> I had to read something relatively big, my entire body would just <em class="neg">tense up</em>. But, for some reason, it doesn't <em class="time">anymore</em>.I started to slowly read some things and decided to add some quotes I found on tumblr to the <em class="wpcontent">website</em>.
+                        </p>
+                        <p class="emoticons">(,,>﹏<,,)</p>
+                        <p>
+                            Anyway, I'm gonna go to sleep like right now so...
+                        </p>
+                        <p>
+                            <em class="pos">Thanks for reading!</em> And remember to be positive!
+                        </p>
+                        <p class="emoticons">ヾ( ˃ᴗ˂ )◞ • *✰</p>
+                        <p class="blog-end">
+                            Written with love by: Zahrya Rozi
+                        </p>
+                    </article>
+
+                    <article class="material-you-card blog-content">
+                        <h2> ✧ So uhh... Welcome! ✧ </h2> <small>May 16, 2025</small>
+                        <p>
+                            It feels a bit weird to be talking to a <em class="socials">general audience </em>... I mean, as humans, we usually know who we're speaking to, either by meeting them in person or virtual. But this isn't like that, I'm currently speaking to <em class="socials">the void</em>, hoping for someone else to hear my comments and respond back.
+                        </p>
+                        <p class="emoticons">(𖦹﹏𖦹;)</p>
+                        <p>
+                            Anyhow, If you're reading this at the <em class="time">time of publishing</em>, that means that either you stumbled upon my <em class="socials">Discord Description's Link </em> or you just found My <em class="socials">Github Repo</em>, either by chance of curiosity or I showed you... Hewwo!!! How is it? do you like it? 
+                        </p>
+                        <p>
+                            This is the <em class="time">first time</em> I made a website seriously and actually thinking things through. After all, I do WANT this website to last all my life as I add or change more and more stuff. I have a lot more planned, as you can see, the <em class="wpcontent">navigation bar</em> still doesn't work. Well, I mean it does, but it takes you to nowhere. I haven't done the other pages still.
+                        </p>
+                        <p class="emoticons"> (ᵕ—ᴗ—)/ 모</p>
+                        <p>
+                            Also, now that i think about it, maybe I should do these <em class="wpcontent">Entries</em> at the <em class="time">end of the day</em>. I mean, i experience the day and gather my thoughts at the end, right? Then, I can successfully write something worth reading!
+                        </p>
+                        <p class="emoticons">( • ̀ω•́ )✧</p>
+                        <p>
+                            There is some <em class="pos">beauty</em> in this, isn't there? Just how the <em class="wpcontent">website</em> didn't exist a moment ago, and now here it is. Slowly developing in something more and more complex and styled...  I don't know, maybe it's just <em class="rlcontent">me</em>
+                        </p>
+                        <p>
+                            I'm loosing the topic, so I should stop <em class="time">before I continue</em> Yapping.
+                        </p>
+                        <p class="emoticons">(,,¬﹏¬,,)</p>
+                        <p>
+                            <em class="pos">Thanks for reading!</em> And remember to drink Monster and be positive!
+                        </p>
+                        <p class="emoticons">ヾ( ˃ᴗ˂ )◞ • *✰</p>
+                        <p class="blog-end">
+                            Written with love by: Zahrya Rozi
+                        </p>
+                    </article>
+                </section>
             </div>
-
-            <div id="liked" class="bg">
-                <h1>Liked Music Genres:</h1>
-                <ul>
-                    <li>Breakcore</li>
-                    <li>Electronic</li>
-                    <li>Electroswing</li>
-                    <li>FutureFunk</li>
-                    <li>Hyperpop</li>
-                    <li>Scenecore</li>
-                    <li>UTAU</li>
-                    <li>Vocaloid </li>
-                </ul>
-                <h1>Liked Music Artists:</h1>
-                <ul>
-                    <li>Food House</li>
-                    <li>Geoxor</li>
-                    <li>m1v</li>
-                    <li>MagdalenaBay</li>
-                    <li>Osanzi</li>
-                    <li>Sirup</li>
-                    <li>STYXVII</li>
-                    <li>whatsaheart </li>
-                    <li>Vylet Pony </li>
-                </ul>
-            </div>
-
-            <div class="bg side-img">
-                <img src="./resources/images/Sidebar/funnimeme1.png">
-            </div>
-
-            <div class="qp bg">
-                <p>
-                    "Beautiful music is the art of the prophets that can calm the agitations of the soul;<br> it is one of the most magnificent and delightful presents God has given us."
-                </p>
-                <p>-Martin Luther</p>
-
-                <p class="divider"></p>
-
-                <p>
-                    "Music is a thing that changes people's lives. It has the capacity to make young people's lives better."
-                </p>
-                <p>-Noel Gallagher</p>
-            </div>
-
-            <div class="bg side-img">
-                <img src="./resources/images/Sidebar/TetoMiku.jpg">
-                <p>Credits to <a href="https://x.com/takawoyu?lang=en" target="_blank">@takawoyu</a></p>
-            </div>
-
-        </aside>
-        <main class="right-column">
-            <article class="bg">
-                <img src="resources/gifs/MainPage/Blinkies/frikaiart.gif">
-                <img src="resources/gifs/MainPage/Blinkies/grrrr.gif">
-                <img src="resources/gifs/MainPage/Blinkies/icecream.gif">
-                <img src="resources/gifs/MainPage/Blinkies/ilovecats.gif">
-                <img src="resources/gifs/MainPage/Blinkies/ilovepink.gif">
-                <img src="resources/gifs/MainPage/Blinkies/scene4evr.gif">
-                <img src="resources/gifs/MainPage/Blinkies/supportgay.gif">
-                <img src="resources/gifs/MainPage/Blinkies/RAWR.gif">
-            </article>
-
-
-            <article class="blog-content bg">
-                <h2> ✧ Second Mayor Website Update! ✧ </h2>
-                <small>May 17, 2025</small>
-                <p>
-                    Hello <em>Wired</em>! This is this <em class="wpcontent">website's Second Mayor Update</em>! 
-                </p>
-                <p class="emoticons">٩(^ᗜ^ )و ´-</p>
-                <p>
-                    I'll probably stop celebrating <em class="time">as soon as</em> I find the website is good enough to be fully <em class="socials">shared</em> hehe... Anyway, <em>y'all</em> have NO IDEA how proud I still am about the <em class="wpcontent">Matsuri's Music Player</em> on the <em class="wpcontent">side bar</em>. It's just, the best thing I've done in here so far.
-                </p>
-                <p>
-                    Today it's been fine, <em>me and my sibling</em> decided it's was <em class="time">time to clean and fix up</em> our <em class="rlcontent">home</em>, so that's what we did. I actually really like how <em class="rlcontent">everything turned out</em>. Have y'all ever felt the air after cleaning? Like it smells really nice, and I'm not referring to the chemicals used to clean, but the smell of air itself. It's just cleaner, fresher, [other adjectives]...
-                </p>
-                <p>
-                    All of that cleaning left me really <em class="neg">exhausted</em> tho, my feet DO NOT want to move anymore. On the <em class="pos">bright side</em>, we finished so I can stay on my pc <em class="time">all the time</em> I want! And I'm using it to continue developing this <em class="wpcontent">website</em> more and more! <em class="time">This time</em> I tried adding more things that make it <em class="wpcontent">personal to me</em>.
-                </p>
-                <p class="emoticons">(ㅅ´ ˘ `)</p>
-                <p>
-                    Apart from the obvious addition of the <em class="wpcontent">Music Likes to the sidebar</em>, I also added other stuff like <em class="wpcontent">The One Meme</em> (That's the name I came up with, it's staying.) and some <em class="wpcontent"> quotes</em>.
-                </p>
-                <p>
-                    I actually just started getting into quotes and poems <em class="time">a month ago</em>, I don't know why tho, I <em class="time">used to</em> hate reading anything longer than 4 paragraphs! And the reason why is really silly: My <em>sibling</em> <em class="neg">forced me</em> to read 10 books <em class="time">during my vacations</em> and that really stick with me. <em class="time">Every time</em> I had to read something relatively big, my entire body would just <em class="neg">tense up</em>. But, for some reason, it doesn't <em class="time">anymore</em>.I started to slowly read some things and decided to add some quotes I found on tumblr to the <em class="wpcontent">website</em>.
-                </p>
-                <p class="emoticons">(,,>﹏<,,)</p>
-                <p>
-                    Anyway, I'm gonna go to sleep like right now so...
-                </p>
-                <p>
-                    <em class="pos">Thanks for reading!</em> And remember to be positive!
-                </p>
-                <p class="emoticons">ヾ( ˃ᴗ˂ )◞ • *✰</p>
-                <p class="blog-end">
-                    Written with love by: Zahrya Rozi
-                </p>
-            </article>
-
-
-
-            <article class="blog-content bg">
-                <h2> ✧ So uhh... Welcome! ✧ </h2>
-                <small>May 16, 2025</small>
-                <p>
-                    It feels a bit weird to be talking to a <em>general audience </em>... I mean, as humans, we usually know who we're speaking to, either by meeting them in person or virtual. But this isn't like that, I'm currently speaking to <em>the void</em>, hoping for someone else to hear my comments and respond back.
-                </p>
-                <p class="emoticons">(𖦹﹏𖦹;)</p>
-                <p>
-                    Anyhow, If you're reading this at the <em class="time">time of publishing</em>, that means that either you stumbled upon my <em class="socials">Discord Description's Link </em> or you just found My <em class="socials">Github Repo</em>, either by chance of curiosity or I showed you... Hewwo!!! How is it? do you like it? 
-                </p>
-                <p>
-                    This is the <em class="time">first time</em> I made a website seriously and actually thinking things through. After all, I do WANT this website to last all my life as I add or change more and more stuff. I have a lot more planned, as you can see, the <em class="wpcontent">navigation bar</em> still doesn't work. Well, I mean it does, but it takes you to nowhere. I haven't done the other pages still.
-                </p>
-                <p class="emoticons"> (ᵕ—ᴗ—)/ 모</p>
-                <p>
-                    Also, now that i think about it, maybe I should do these <em class="wpcontent">Entries</em> at the <em class="time">end of the day</em>. I mean, i experience the day and gather my thoughts at the end, right? Then, I can successfully write something worth reading!
-                </p>
-                <p class="emoticons">( • ̀ω•́ )✧</p>
-                <p>
-                    There is some <em class="pos">beauty</em> in this, isn't there? Just how the <em class="wpcontent">website</em> didn't exist a moment ago, and now here it is. Slowly developing in something more and more complex and styled...  I don't know, maybe it's just <em>me</em>
-                </p>
-                <p>
-                    I'm loosing the topic, so I should stop <em class="time">before I continue</em> Yapping.
-                </p>
-                <p class="emoticons">(,,¬﹏¬,,)</p>
-                <p>
-                    <em class="pos">Thanks for reading!</em> And remember to drink Monster and be positive!
-                </p>
-                <p class="emoticons">ヾ( ˃ᴗ˂ )◞ • *✰</p>
-                <p class="blog-end">
-                    Written with love by: Zahrya Rozi
-                </p>
-            </article>
         </main>
     </div>
     <script src="./resources/js/musicPlayer.js"></script>

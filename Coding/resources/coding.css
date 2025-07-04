@@ -1,0 +1,17 @@
+/* coding.css */
+
+.placeholder-card {
+    text-align: center; /* Center the text inside the placeholder card */
+    padding: 60px; /* Add some padding around the text */
+    margin-top: 3rem; /* Add some space above the card */
+}
+
+.placeholder-card h1 {
+    font-size: 2.5rem; /* Make the main message prominent */
+    margin-bottom: 1rem;
+}
+
+.placeholder-card h2 {
+    font-size: 1.5rem; /* Style the secondary message */
+    color: #a0a0a0; /* Use a slightly faded color */
+}

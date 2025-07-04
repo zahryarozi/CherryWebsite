@@ -1,0 +1,125 @@
+body {
+    text-align: center;
+}
+
+.aboutme-section-card {
+    margin-bottom: 2rem;
+    padding: 30px;
+}
+
+#intro-header-card {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.image-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 450%;
+    background-color: #561f29;
+    z-index: 0;
+    margin: 0;
+}
+
+#intro-header-card .profile-image {
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    border-radius: 16px;
+    margin: -40px;
+    position: relative;
+    z-index: 1;
+}
+
+#intro-header-text h1 {
+    font-size: 1.6rem;
+    margin: -10px;
+}
+
+#intro-text-card {
+}
+
+#intro-text-card .emoticons {
+    margin: 1rem 0;
+}
+
+#intro-text-card p {
+    margin-bottom: 1rem;
+}
+
+#intro-text-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+.likes-dislikes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .likes-dislikes-grid {
+        grid-template-columns: 1fr 1fr;
+        max-width: 900px;
+    }
+}
+
+.likes-section,
+.dislikes-section {
+    padding: 30px;
+}
+
+.likes-section h2,
+.dislikes-section h2 {
+    margin-bottom: 1rem;
+}
+
+.likes-section ul,
+.dislikes-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.likes-section ul li,
+.dislikes-section ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 0;
+}
+
+.likes-section ul li::before {
+    content: "♥";
+    color: #f8bbd0;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.dislikes-section ul li::before {
+    content: "✗";
+    color: #f48fb1;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+
+.coding-section {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coding-section h2 {
+    margin-bottom: 1rem;
+}

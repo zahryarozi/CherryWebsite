@@ -1,0 +1,38 @@
+@import url('./OCSbase.css');
+
+body {
+    background-color: var(--dark-background-blue);
+    color: var(--light-text);
+    background-image: url('../videos/OCStoriesMain.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+body::before {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#npw-selection:hover,
+#comingsoon-selection:hover {
+    border-color: var(--accent-blue);
+}
+
+#npw-selection:hover::before {
+    background-image: url('../images/npw.jpg');
+    opacity: 0.3;
+}
+
+#npw-selection:hover .selection-label {
+    color: var(--accent-blue);
+}
+
+#comingsoon-selection:hover::before {
+    background-image: url('../images/comingsoon.jpg');
+    opacity: 0.3;
+}
+
+#comingsoon-selection:hover .selection-label {
+    color: var(--accent-blue);
+}

@@ -1,0 +1,22 @@
+#npw-selection-characters:hover,
+#comingsoon-selection:hover {
+    border-color: var(--accent-blue);
+}
+
+#npw-selection-characters:hover::before {
+    background-image: url('../images/npw-characters.jpg');
+    opacity: 0.3;
+}
+
+#npw-selection-characters:hover .selection-label {
+    color: var(--accent-blue);
+}
+
+#comingsoon-selection:hover::before {
+    background-image: url('../images/comingsoon2.jpg');
+    opacity: 0.3;
+}
+
+#comingsoon-selection:hover .selection-label {
+    color: var(--accent-blue);
+}
