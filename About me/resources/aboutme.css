@@ -4,7 +4,7 @@ body {
 
 .aboutme-section-card {
     margin-bottom: 2rem;
-    padding: 30px;
+    padding: 0;
 }
 
 #intro-header-card {
@@ -39,9 +39,11 @@ body {
 #intro-header-text h1 {
     font-size: 1.6rem;
     margin: -10px;
+    padding: 20px;
 }
 
 #intro-text-card {
+    padding: 30px;
 }
 
 #intro-text-card .emoticons {
@@ -118,8 +120,149 @@ body {
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
+    padding: 30px;
 }
 
 .coding-section h2 {
     margin-bottom: 1rem;
+}
+
+/* Updated styles for Liked Music and Liked Series sections */
+.music-series-title {
+    padding: 30px;
+    margin-bottom: 2rem;
+}
+
+.music-series-title h2 {
+    margin: 0;
+}
+
+.music-series-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .music-series-grid {
+        grid-template-columns: 1.7fr 1.3fr;
+    }
+    .music-series-grid.reverse-grid {
+        grid-template-columns: 1.3fr 1.7fr;
+    }
+}
+
+.music-series-featured {
+    padding: 20px;
+}
+
+.music-series-featured a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.featured-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.featured-content.reverse-content {
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+    .featured-content {
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .featured-content.reverse-content {
+        flex-direction: row-reverse;
+    }
+}
+
+.music-series-featured .album-cover,
+.music-series-featured .series-poster {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+
+.featured-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .featured-text-container {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .featured-text-container.right-align-text {
+        align-items: flex-start;
+        text-align: left;
+    }
+    .featured-text-container.left-align-text {
+        align-items: flex-end;
+        text-align: right;
+    }
+}
+
+.featured-text h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.featured-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+.comment-text {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.music-series-list {
+    text-align: left;
+    padding: 30px;
+}
+
+.music-series-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.music-series-list ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.music-series-list ul li::before {
+    content: "♪";
+    color: #f8bbd0;
+    position: absolute;
+    left: 0;
+}
+
+.music-series-grid.reverse-grid .music-series-list ul li::before {
+    content: "☆";
+    color: #f8bbd0;
 }
